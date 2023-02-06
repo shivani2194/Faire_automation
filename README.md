@@ -1,4 +1,3 @@
-## Tools and Tech
 
 1. **IDE** - VS Code: Smart IDE with built in intelliSense and offers integrations to versioning and formatting tools
 2. **Package Manager** - NPM: The most comprehensive online repository for the Node.js JavaScript runtime environment
