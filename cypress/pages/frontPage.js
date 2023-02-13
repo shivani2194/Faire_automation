@@ -19,8 +19,8 @@ export class FrontPage {
 }
 
 export class ReadStoryModal {
-  static getLocation() {
-    return cy.get("p.Styles__Typography-sc-4zz2i3-0.edPTLZ");
+  static getContent() {
+    return cy.get(".StoryModal__MakerFactsSection-sc-vqfals-4 > :nth-child(6)")
   }
   static getStory() {
     return cy.get("p.StoryModal__StoryContainer-sc-vqfals-6");

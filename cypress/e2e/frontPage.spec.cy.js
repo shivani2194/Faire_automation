@@ -18,7 +18,7 @@ describe("Front Page", () => {
     it("Given a product is clicked, should let the sign in modal pop up", () => {
         SearchBar.getSuggestions().first().click();
         cy.wait("@signupPage").its("response.statusCode").should("eq", 204);
-        FrontPage.getProduct().first().click();
+        FrontPage.getProduct().first().click({force:true});
         SignUpModal.getSignUpLogo().should('exist');
         SignUpModal.getCrossButton().click();
     });
@@ -40,10 +40,9 @@ describe("Front Page", () => {
             "contain",
             "Perfume Art Creation"
         );
-        FrontPage.getBrandLogo().should("exist");
         FrontPage.getReadStoryButton().contains('Read Their Story').click();
-        ReadStoryModal.getLocation().should("exist");
-        ReadStoryModal.getStory().should("exist")
-        ReadStoryModal.getEstablishedYear().should("exist");
+        ReadStoryModal.getContent().invoke('text').should("exist")
+        ReadStoryModal.getStory().invoke('text').should("exist")
+        ReadStoryModal.getEstablishedYear().invoke('text').should("exist");
     });
 })

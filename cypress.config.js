@@ -1,10 +1,9 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-    projectId: 'ahe74p',
     e2e: {
         baseUrl: 'https://faire.com/',
-        reporter: 'cypress-mochawesome-reporter',
+        reporter: 'cypress-mochawesome-reporter',  //for reports
         reporterOptions: {
           charts: true,
           reportPageTitle: 'custom-title',
@@ -14,9 +13,7 @@ module.exports = defineConfig({
           timestamp: 'mmddyyyy_HHMMss',
           overwrite: true,
           html: true,
-          json: true,
-        
-        },
+         },
         screenshotsFolder: 'mochawesome-report/assets',
         defaultCommandTimeout: 10000,
         pageLoadTimeout: 70000,
